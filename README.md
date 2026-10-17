@@ -60,6 +60,8 @@ python -m slr synthesis          # outputs/synthesis/synthesis_report.md, tables
 python -m slr workbook           # outputs/Master_Evidence_Register.xlsx
 
 python -m slr all                # every stage that has input, in order
+
+python scripts/build_report.py   # all documents in one file: outputs/SLR_Project_Documentation.docx + .pdf
 ```
 
 Every command can be re-run at any time. Reviewer input is never overwritten.
