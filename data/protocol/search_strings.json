@@ -1,0 +1,33 @@
+{
+  "protocol_version": "1.0",
+  "status": "locked after pilot (Document 11)",
+  "searches": [
+    {
+      "search_id": "S1",
+      "wave": 1,
+      "database": "Scopus",
+      "fields": "TITLE-ABS-KEY",
+      "query": "TITLE-ABS-KEY ( ( \"reinforcement learning\" OR \"Q-learning\" OR \"deep Q-network*\" OR \"DQN\" OR \"actor-critic\" OR \"policy gradient\" OR \"proximal policy optimi*\" ) AND ( \"traffic signal*\" OR \"traffic light*\" OR \"signali?ed intersection*\" OR \"signal timing\" OR \"signal phas*\" OR \"adaptive signal control\" ) ) AND PUBYEAR > 2018 AND PUBYEAR < 2027 AND ( LIMIT-TO ( DOCTYPE , \"ar\" ) OR LIMIT-TO ( DOCTYPE , \"cp\" ) ) AND ( LIMIT-TO ( LANGUAGE , \"English\" ) )",
+      "filters": "PUBYEAR 2019-2026 (in query); DOCTYPE ar, cp; LANGUAGE English",
+      "export": "CSV, all fields incl. abstract and keywords"
+    },
+    {
+      "search_id": "S2",
+      "wave": 1,
+      "database": "Web of Science Core Collection",
+      "fields": "TS",
+      "query": "TS=( (\"reinforcement learning\" OR \"Q-learning\" OR \"deep Q-network*\" OR DQN OR \"actor-critic\" OR \"policy gradient\" OR \"proximal policy optimi*\") AND (\"traffic signal*\" OR \"traffic light*\" OR \"signali?ed intersection*\" OR \"signal timing\" OR \"signal phas*\" OR \"adaptive signal control\") ) AND PY=(2019-2026)",
+      "filters": "Editions SCI-EXPANDED, SSCI, ESCI, CPCI-S; DT Article, Proceedings Paper, Early Access; LA English",
+      "export": "Tab-delimited, Full Record"
+    },
+    {
+      "search_id": "S3",
+      "wave": 1,
+      "database": "IEEE Xplore",
+      "fields": "All Metadata",
+      "query": "(\"All Metadata\":\"reinforcement learning\" OR \"All Metadata\":\"Q-learning\" OR \"All Metadata\":\"deep Q-network\" OR \"All Metadata\":\"DQN\" OR \"All Metadata\":\"actor-critic\" OR \"All Metadata\":\"policy gradient\" OR \"All Metadata\":\"proximal policy optimization\") AND (\"All Metadata\":\"traffic signal\" OR \"All Metadata\":\"traffic signals\" OR \"All Metadata\":\"traffic light\" OR \"All Metadata\":\"traffic lights\" OR \"All Metadata\":\"signalized intersection\" OR \"All Metadata\":\"signalized intersections\" OR \"All Metadata\":\"signalised intersection\" OR \"All Metadata\":\"signal timing\" OR \"All Metadata\":\"signal phase\" OR \"All Metadata\":\"adaptive signal control\")",
+      "filters": "Year 2019-2026; Conferences, Journals, Early Access Articles",
+      "export": "CSV"
+    }
+  ]
+}

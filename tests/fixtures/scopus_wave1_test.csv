@@ -1,0 +1,6 @@
+﻿Authors,Author full names,Title,Year,Source title,DOI,Link,Affiliations,Abstract,Author Keywords,Index Keywords,Document Type,Language of Original Document,EID
+Alpha A.; Beta B.,,TEST Deep reinforcement learning for adaptive traffic signal control at a single intersection,2021,Test Journal of Transport,10.9999/test.0001,,"Univ A, City, Kazakhstan",A DQN agent controls the traffic signal phases.,reinforcement learning; traffic signal,,Article,English,2-s2.0-0001
+Gamma C.; Delta D.,,TEST Multi-agent actor-critic for network traffic light coordination,2022,Proc. Test Conference,10.9999/test.0002,,"Univ B, Town, China",MARL coordinates traffic lights in a grid.,MARL,,Conference Paper,English,2-s2.0-0002
+Epsilon E.,,TEST Graph attention reinforcement learning for signalized intersections in real city networks,2023,Test Transportation Research,,,"Univ C, Place, Germany",Graph attention with RL.,GNN,,Article,English,2-s2.0-0003
+Zeta Z.,,TEST A review of reinforcement learning traffic signal control,2022,Test Reviews,10.9999/test.0004,,"Univ D, X, USA",Review.,review,,Review,English,2-s2.0-0004
+Eta H.,,TEST Q-learning traffic lights in 2017,2017,Old Journal,10.9999/test.0005,,"Univ E, Y, Italy",Old paper.,,,Article,English,2-s2.0-0005

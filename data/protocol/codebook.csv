@@ -1,0 +1,65 @@
+﻿table,field,section,supports,type,allowed_values,description
+technical,paper_id,A,all,text,,Stable paper ID (P001...)
+technical,authors,A,RQ1,text,,Authors
+technical,year,A,RQ1,int,,Publication year
+technical,title,A,-,text,,Title
+technical,venue,A,RQ1,text,,Journal or conference
+technical,venue_type,A,RQ1,enum,journal; conference,Venue type
+technical,doi,A,-,text,,DOI
+technical,country_first_author,A,RQ1,text,,"Country of first author's affiliation (pre-filled guess, verify)"
+technical,study_location,A,RQ1,text,,"City/country of the studied network, or 'synthetic'"
+technical,application_context,B,RQ1,enum,isolated_intersection; arterial_corridor; grid_network; real_urban_network; other,Spatial setting of the controlled intersections
+technical,n_intersections,B,RQ1,int,,Largest number of RL-controlled intersections evaluated
+technical,traffic_modes,B,RQ1;RQ6,multi,private_vehicles; pedestrians; cyclists; public_transport; emergency_vehicles; cav_connected_vehicles; freight; mixed,Road users explicitly modelled/prioritised
+technical,objective_focus,B,RQ1,multi,efficiency; safety; emissions_energy; equity_fairness; priority; robustness,Objectives explicitly optimised
+technical,rl_family,C,RQ2,enum,tabular; value_based_deep; policy_gradient; actor_critic; model_based; hierarchical; meta_rl; offline_rl; llm_rl_hybrid; other,RL algorithm family of the proposed method
+technical,algorithm,C,RQ2,text,,"Named algorithm (e.g. DQN, D3QN, PPO, A2C, MAPPO)"
+technical,agent_architecture,C,RQ2,enum,single_agent; multi_agent_independent; multi_agent_cooperative; centralised_multi_intersection,Agent architecture
+technical,coordination,C,RQ2,enum,none; neighbour_observation; explicit_communication; graph_attention; pressure_based; hierarchical; other,Coordination mechanism between intersections
+technical,state_repr,C,RQ2,multi,queue_length; waiting_time; vehicle_count; occupancy; speed; position_matrix_image; pressure; current_phase; phase_duration; cv_trajectory; raw_camera; other,State features
+technical,action_type,C,RQ2,enum,phase_selection; phase_switch_keep; phase_duration; cycle_split; offset; other,Action definition
+technical,reward_type,C,RQ2,multi,queue_length; waiting_time; delay; pressure; throughput; travel_time; speed; emissions; safety; composite; other,Reward components
+technical,function_approximator,C,RQ2,enum,table; mlp; cnn; rnn_lstm; gnn; attention_transformer; llm; other,Policy/value function approximator
+technical,simulator,C,RQ3,multi,sumo; cityflow; vissim; aimsun; paramics; cbengine; custom; other; none,Simulation environment(s)
+technical,sensing_source,C,RQ5,multi,loop_detector; camera; radar_lidar; connected_vehicle; simulator_ground_truth; other,Sensing assumed or used for the state
+technical,network_source,F,RQ3,enum,synthetic; real,Road network geometry
+technical,demand_source,F,RQ3,enum,synthetic; real_dataset; calibrated; field_live,Traffic demand used in evaluation
+technical,dataset_ids,F,RQ3;Step27,text,,"Benchmark datasets/scenarios, ';'-separated canonical names (e.g. jinan_3x4; hangzhou_4x4; ny_28x7; monaco; ingolstadt7; cologne8)"
+technical,baseline_classes,F,RQ3;RQ4,multi,fixed_time; actuated; max_pressure; sotl; scats_scoot; other_adaptive; rl; other,Classes of baselines compared
+technical,vrl,F,RQ3;RQ4,vrl,0; 1; 2; 3; 4; 5,Validation Realism Level 0-5 (highest reached)
+technical,transfer_test,F,RQ3,yn,Y; N,Evaluated on unseen scenarios / other simulator
+technical,robustness_test,F,RQ3;RQ5,yn,Y; N,"Detector noise/failure, demand surge or incident tests"
+technical,safety_constraints,F,RQ5,yn,Y; N,"Min green, clearance, action masking or other constraints enforced"
+technical,n_seeds,F,QA5,text,,Number of independent runs/seeds ('NR' if not reported)
+technical,code_available,F,QA3,yn,Y; N,Code publicly available
+technical,key_findings,G,RQ4,text,,Main findings (1-2 sentences)
+technical,advantages,G,RQ5,text,,Advantages claimed
+technical,limitations_authors,G,RQ5,text,,Limitations stated by the authors
+technical,barriers,H,RQ5,multi,sensing_data; sim_to_real_gap; safety_compliance; robustness; computation; communication; interpretability; scalability; multimodality; training_cost_sample_efficiency; regulation_institutional; none_reported,Deployment barriers discussed or evident
+technical,mitigations,H,RQ5,text,,Mitigations proposed for the barriers
+technical,reviewer_strength,H,RQ6,text,,Main methodological strength (reviewer)
+technical,reviewer_weakness,H,RQ6,text,,Main weakness (reviewer)
+technical,research_gap_note,H,RQ6,text,,Gap this study reveals or leaves open
+technical,study_family_id,DEP,Step27,text,,Same experiments/project/dataset family -> same ID (e.g. F01). Default = paper_id
+technical,campaign_id,DEP,Step27,text,,"Field campaign or shared experiment ID, if any"
+technical,extracted_by,META,-,enum,R1; R2,Extractor
+technical,verified_by,META,-,enum,R1; R2; ,Verifier (20 % sample)
+quantitative,entry_id,E,-,text,,Q0001...
+quantitative,paper_id,E,-,text,,Paper ID
+quantitative,scenario_id,E,Step27,text,,Dataset/scenario canonical name for this number
+quantitative,metric,E,RQ4,enum,travel_time; waiting_time; delay; queue_length; stops; fuel; co2; emissions_other; safety_conflicts; throughput; speed; other,Outcome metric
+quantitative,rl_method_name,E,RQ4,text,,Name of the proposed RL method
+quantitative,rl_value,E,RQ4,float,,Value for the proposed RL method
+quantitative,baseline_name,E,RQ4,text,,Baseline name as in the paper
+quantitative,baseline_class,E,RQ4,enum,fixed_time; actuated; max_pressure; sotl; scats_scoot; other_adaptive; rl; other,Baseline class
+quantitative,baseline_value,E,RQ4,float,,Value for the baseline
+quantitative,reported_improvement_pct,E,RQ4,float,,Use only if the paper gives the % improvement but not both raw values
+quantitative,unit,E,RQ4,text,,"Unit (s, veh, veh/h, m, g...)"
+quantitative,rl_sd,E,Step26,float,,"SD/dispersion of RL value, if reported"
+quantitative,baseline_sd,E,Step26,float,,"SD of baseline value, if reported"
+quantitative,n_runs,E,Step26,int,,Number of runs behind the values
+quantitative,vrl,E,RQ4,vrl,0; 1; 2; 3; 4; 5,Validation level of this experiment (defaults to paper VRL)
+quantitative,context,E,-,text,,"Demand level, peak/off-peak, test condition..."
+quantitative,source_location,E,audit,text,,"Page/table/figure, e.g. 'Table 4, p. 9'"
+quantitative,extracted_by,META,-,enum,R1; R2,Extractor
+quantitative,verified_by,META,-,enum,R1; R2; ,Verifier (100 % of entries)

@@ -1,0 +1,3 @@
+source,title,authors,year,venue,doi,abstract,keywords,doc_type,language,url,found_via
+citation,TEST Offline reinforcement learning from detector logs for traffic signals,Lambda L.,2025,Test Journal,10.9999/test.0010,Offline RL.,,article,English,,backward chaining of P001
+citation,TEST Deep reinforcement learning for adaptive traffic signal control at a single intersection,Alpha A.,2021,Test Journal of Transport,10.9999/test.0001,,,article,English,,forward chaining

@@ -1,0 +1,4 @@
+Document Title,Authors,Author Affiliations,Publication Title,Publication Year,Abstract,DOI,PDF Link,Author Keywords,IEEE Terms,Document Identifier
+TEST Deep reinforcement learning for adaptive traffic signal control at a single intersection,A. Alpha; B. Beta,,Test Journal of Transport,2021,A DQN agent.,https://doi.org/10.9999/TEST.0001,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1001,,,IEEE Journals
+TEST PPO for phase duration at urban intersections,K. Kappa,"Univ F, Z, Japan",Proc. IEEE Test Conf,2024,PPO phase duration traffic signal.,10.9999/test.0008,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1008,,,IEEE Conferences
+TEST Sim-to-real transfer of traffic signal reinforcement learning policies,T. Theta,,Proc. IEEE Test Conf,2024,Conference version.,10.9999/test.0009,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1009,,,IEEE Conferences

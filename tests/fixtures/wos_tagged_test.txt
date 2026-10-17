@@ -1,0 +1,16 @@
+FN Clarivate Analytics Web of Science
+VR 1.0
+PT J
+AU Mu, M
+   Nu, N
+TI TEST Tagged format reinforcement learning
+   traffic signal record
+SO TEST JOURNAL
+LA English
+DT Article
+PY 2023
+DI 10.9999/test.0011
+UT WOS:0011
+ER
+
+EF

@@ -1,0 +1,7 @@
+item,description,status,evidence_location,checked_by
+PRISMA-2020-checklist,All 27 items addressed with page numbers,,,
+PRISMA-abstract,Abstract checklist (12 items),,,
+PRISMA-S,Search strategies reported in full for each database,,,
+PRISMA-flow,Flow diagram counts reproducible from outputs/prisma/prisma_counts.csv,,,
+Protocol-registration,Registration ID / amendments reported,,,
+Data-availability,Master evidence register and pipeline shared,,,

@@ -1,0 +1,7 @@
+rq,finding_id,finding,supporting_papers,supporting_table_or_figure,certainty,notes
+RQ1,,,,outputs/synthesis/tables/papers_per_year.csv,,
+RQ2,,,,outputs/synthesis/tables/rl_family.csv,,
+RQ3,,,,outputs/synthesis/tables/vrl.csv,,
+RQ4,,,,outputs/synthesis/tables/ri_by_metric_baseline_family.csv,,
+RQ5,,,,outputs/synthesis/tables/barriers.csv,,
+RQ6,,,,outputs/synthesis/tables/gap_matrix.csv,,
