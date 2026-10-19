@@ -1,6 +1,6 @@
 # Speaker notes — Smart Traffic Lights That Learn (midterm, 10 minutes)
 
-Total: 1488 words ≈ 9.9 minutes at 150 words per minute (about one minute per slide).
+Total: 1567 words ≈ 10.4 minutes at 150 words per minute (about one minute per slide).
 
 ## Slide 1 — Smart traffic lights that learn
 
@@ -50,14 +50,25 @@ This slide shows the main contribution of our review. Earlier reviews mostly ask
 
 Before designing the formal search, we ran a short scoping search to understand the field. These are design inputs, not results of our review, and they are not counted in the PRISMA numbers. Four observations stood out. First, simulators dominate: recent reviews name SUMO and CityFlow as the main test platforms. Second, field tests are rare: papers from 2021 and 2022 that focus on deployment report that RL signal controllers have almost never run on live streets. Third, the last systematic review on this topic, by Noaeen and colleagues, covered 160 papers but only up to March 2020, so recent years have not been systematically reviewed. Fourth, many papers reuse the same few city datasets, such as Jinan, Hangzhou and New York. So we must be careful not to count the same evidence twice, and our method handles that.
 
-## Slide 9 — What we have built so far
+## Slide 9 — Early evidence: what published studies report
 
-*≈ 0:54 min (135 words)*
+*≈ 1:12 min (180 words)*
 
-So what have we actually produced so far? First, fifteen planning and method documents, covering all 27 steps of our review guideline, combined into one 32-page project dossier. Second, ready-to-run search strings for all three databases. Third, a codebook with 64 extraction fields, so that every study is described in exactly the same way. Fourth, a small software pipeline with ten commands. It imports the search results exported from the databases, removes duplicates, prepares the screening sheets for both reviewers, calculates our agreement, produces the quality and extraction sheets, and draws the PRISMA flow diagram. The key design rule is that every count and every statistic is computed from the records, never typed by hand. That makes our review reproducible and easy to audit. The pipeline has ten automated tests, and all of them pass.
+Here is the first real evidence we collected from published papers during the scoping search. These numbers are reported by the authors themselves, in abstracts and benchmark tables. We have not yet checked them in the full texts, and they are not the results of our systematic review. Still, a pattern is visible. Against a fixed-time plan in simulation, a well-known method called CoLight cuts average travel time by about sixty percent, for example from 718 to 302 seconds on Hangzhou data. But when another paper re-runs the same method on the same data, it reports 348 seconds, fifteen percent worse, which shows a reproducibility problem. When the comparison is the real adaptive system already used at two Queensland intersections, the delay reduction falls to about a third, and that is still in simulation. Real adaptive signal pilots in Hangzhou and Nanchang, which are not RL, report around fifteen percent less delay on real streets. And we found no verified RL field test. So the tougher and more realistic the comparison, the smaller the gain. RQ4 will test this properly.
 
 ## Slide 10 — Progress: about 50% complete
 
-*≈ 1:24 min (209 words)*
+*≈ 1:37 min (243 words)*
 
-Finally, the question we were asked: how complete is the project, and why do we say fifty percent? We divided the whole project into six phases and gave each a weight based on the effort it needs, adding up to one hundred points. We only count work that is actually finished. Phase one, planning and the protocol, is complete: 20 out of 20. Phase two, the search strategy: the concepts, databases and search strings are done; only the pilot run and the formal lock are left, so 13 out of 15. Phase three, the review tools for screening, quality scoring, extraction and synthesis, is built and tested: 15 out of 15. Phase four, running the searches and screening, is next, so zero. Phase five, quality assessment and extraction, has not started: zero. Phase six, synthesis and writing, has a draft taxonomy, worth 2 out of 15. Together that is 50 out of 100. Put simply, the design half of the review is complete: we know exactly what to search, how to judge each paper and how to analyse the results. The execution half starts now, with the pilot search and the locked protocol as our next milestone. Thank you for your attention. We are happy to answer your questions.
+Finally, the question we were asked: how complete is the project, and why do we say fifty percent? We divided the whole project into six phases and gave each a weight based on the effort it needs, adding up to one hundred points. We only count work that is actually finished. Phase one, planning and the protocol, is complete: 20 out of 20. Phase two, the search strategy: the concepts, databases and search strings are done; only the pilot run and the formal lock are left, so 13 out of 15. Phase three, the review tools for screening, quality scoring, extraction and synthesis, is built and tested: 15 out of 15. Phase four, running the searches and screening, is next, so zero. Phase five, quality assessment and extraction, has not started: zero. Phase six, synthesis and writing, has a draft taxonomy and the first evidence sample you just saw, worth 2 out of 15. Behind this sit fifteen planning documents, search strings for three databases, a 64-field codebook and a tested toolkit that computes every PRISMA number from the records. Together that is 50 out of 100. Put simply, the design half of the review is complete: we know exactly what to search, how to judge each paper and how to analyse the results. The execution half starts now, with the pilot search and the locked protocol as our next milestone. Thank you for your attention. We are happy to answer your questions.
+
+## Sources for slide 9 (early evidence)
+
+Values as reported by the authors (abstracts or result tables), collected in the scoping search; to be verified in the full texts during the review.
+
+- CoLight vs fixed-time on Hangzhou and Jinan (302.37 s vs 718.29 s; 309.93 s vs 814.11 s): benchmark table in DHLight, arXiv:2409.05037 (2024). Original CoLight: Wei et al., CIKM 2019, arXiv:1905.05717.
+- CoLight re-run at 347.87 s on Hangzhou: arXiv:2404.11014 (2024), spatio-temporal hypergraph MARL paper.
+- Pan (2023), Traffic Light Control with Reinforcement Learning, arXiv:2308.14295 (preprint): waiting time −57.1 % to −100 %, queue length −40.9 % to −100 %, total travel time −16.8 % to −68.0 % vs fixed signal plans; synthetic and real Hangzhou data.
+- Tahir et al. (2026), Accident Analysis & Prevention (PubMed 41812491): crash risk and delay −69.95 % and −33.14 % (Gold Coast Rd – Hope Island Rd), −87.75 % and −37.91 % (Granard Rd – Beaudesert Rd) vs the observed adaptive signal system; microsimulation.
+- Big-data adaptive (non-RL) signal pilots in Hangzhou and Nanchang: over 15 % reduction in trip delay; Nature Communications (2025), https://www.nature.com/articles/s41467-025-56701-4.
+- No RL field test found: targeted searches for field trials and real-world deployment returned only simulation studies; Chen, Fang & Sadeh (2022, arXiv:2206.11996) and Müller & Sabatelli (2022, arXiv:2206.10122) state that RL signal control has not yet been deployed in the field.
